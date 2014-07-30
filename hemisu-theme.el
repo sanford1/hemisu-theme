@@ -127,6 +127,12 @@
      `(mode-line-urgent ((t (:foreground ,faint-red :box nil))))
 
      `(header-line ((t (:inherit mode-line :inverse-video nil))))
+
+     `(company-tooltip ((t (:background ,dimmed))))
+     `(company-scrollbar-bg ((t (:background ,comment))))
+     `(company-scrollbar-fg ((t (:background ,accent1))))
+     `(company-tooltip-selection ((t (:background ,accent3))))
+     `(company-tooltip-common ((t (:foreground ,norm))))
      )
 
 
@@ -136,7 +142,9 @@
      `(fci-rule-color ,subtle))
 
     ;; call chained theme function
-    (when childtheme (funcall childtheme))))
+    (when childtheme (funcall childtheme))
+    )
+  )
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
