@@ -102,7 +102,7 @@
 
      `(cursor                       ((t (:background ,accent3 :foreground ,bg))))
      `(default                      ((t (:background ,bg      :foreground ,norm))))
-     `(region                       ((t (:background ,faint-blue))))
+     `(region                       ((t (:foreground ,norm :background ,faint-blue))))
      `(font-lock-constant-face      ((t (:foreground ,accent1))))
      `(font-lock-comment-face       ((t (:foreground ,comment))))
      `(font-lock-string-face        ((t (:foreground ,accent2))))
@@ -113,10 +113,21 @@
      `(font-lock-variable-name-face ((t (:foreground ,accent2))))
      `(font-lock-preprocessor-face  ((t (:foreground ,accent2))))
 
+     `(lazy-highlight ((t (:background ,faint-blue :foreground ,norm))))
+     `(trailing-whitespace ((t (:background ,accent4))))
+
      `(vertical-border              ((nil (:foreground ,subtle))))
-     `(header-line                  ((t (:background "#000000"))))
-     `(mode-line ((t (:background ,accent2 :foreground ,bg :box nil))))
-     `(mode-line-inactive ((t (:background ,subtle :foreground ,bg :box nil)))))
+     ;; `(mode-line          ((t (:background ,accent2 :foreground ,bg :box nil))))
+     ;; `(mode-line-inactive ((t (:background ,subtle  :foreground ,bg :box nil))))
+     ;; `(header-line                  ((t (:background "#000000"))))
+     `(mode-line ((t (:background "gray6" :foreground "gray60" :box nil))))
+     `(mode-line-inactive ((t (:background "gray10" :foreground "gray60" :box nil))))
+
+     `(mode-line-highlight ((t (:foreground ,accent4 :box nil))))
+     `(mode-line-urgent ((t (:foreground ,faint-red :box nil))))
+
+     `(header-line ((t (:inherit mode-line :inverse-video nil))))
+     )
 
 
     (custom-theme-set-variables
