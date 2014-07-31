@@ -133,6 +133,9 @@
      `(company-scrollbar-fg ((t (:background ,accent1))))
      `(company-tooltip-selection ((t (:background ,accent3))))
      `(company-tooltip-common ((t (:foreground ,norm))))
+
+     `(company-preview ((t (:background ,bg :foreground ,accent3 :underline t))))
+     `(company-preview-common ((t (:inherit company-preview :weight bold))))
      )
 
 
