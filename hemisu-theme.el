@@ -100,7 +100,8 @@
      theme-name
      '(button ((t (:underline t))))
 
-     `(cursor                       ((t (:background ,accent3 :foreground ,bg))))
+     ;; `(cursor                       ((t (:background ,accent3 :foreground ,bg))))
+     `(cursor                       ((t (:background ,norm :foreground ,bg))))
      `(default                      ((t (:background ,bg      :foreground ,norm))))
      `(region                       ((t (:foreground ,norm :background ,faint-blue))))
      `(font-lock-constant-face      ((t (:foreground ,accent1))))
@@ -114,7 +115,7 @@
      `(font-lock-preprocessor-face  ((t (:foreground ,accent2))))
 
      `(lazy-highlight ((t (:background ,faint-blue :foreground ,norm))))
-     `(trailing-whitespace ((t (:background ,accent4))))
+     `(trailing-whitespace ((t (:background "goldenrod"))))
 
      `(vertical-border              ((nil (:foreground ,subtle))))
      ;; `(mode-line          ((t (:background ,accent2 :foreground ,bg :box nil))))
@@ -129,8 +130,8 @@
      `(header-line ((t (:inherit mode-line :inverse-video nil))))
 
      `(company-tooltip ((t (:background ,dimmed))))
-     `(company-scrollbar-bg ((t (:background ,comment))))
-     `(company-scrollbar-fg ((t (:background ,accent1))))
+     `(company-scrollbar-bg ((t (:background ,norm))))
+     `(company-scrollbar-fg ((t (:background ,bg))))
      `(company-tooltip-selection ((t (:background ,accent3))))
      `(company-tooltip-common ((t (:foreground ,norm))))
 
